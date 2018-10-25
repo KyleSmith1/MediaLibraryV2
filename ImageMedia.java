@@ -25,6 +25,12 @@ public class ImageMedia extends media {
 
    
     public boolean addCategory(String parameter) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if (libraryString.contains(parameter)) {
+            mCategories.add(parameter);
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }

@@ -30,12 +30,11 @@ abstract class media {
     public void setDescription(String newDescription) {
         mDescription = newDescription;
     }
-    
+
     public abstract boolean addCategory(String parameter);
-    
-    public void getCategories(Vector parameter){
+
+    public void getCategories(Vector parameter) {
         //parameter.add(mCategories);
     }
-       
 
 }

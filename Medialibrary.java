@@ -9,10 +9,17 @@ import java.util.Collections;
 public class Medialibrary {
 
     private ArrayList<media> library;
-    private ArrayList<String> libraryString;
+    public ArrayList<String> libraryString;
 
     public Medialibrary() {
         library = new ArrayList<>();
+
+        libraryString = new ArrayList<>();
+
+        for (int i = 0; i < library.size(); i++) {
+            libraryString.add(library.get(i).getName());
+
+        }
     }
 
     public void addMedia(media newMedia) {
@@ -27,12 +34,6 @@ public class Medialibrary {
 
     public media findMedia(String searchItem) {
 
-        libraryString = new ArrayList<>();
-
-        for (int i = 0; i < library.size(); i++) {
-            libraryString.add(library.get(i).getName());
-
-        }
         int index = libraryString.indexOf(searchItem);
         if (libraryString.contains(searchItem)) {
             return library.get(index);
